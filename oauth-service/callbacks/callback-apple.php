@@ -13,12 +13,13 @@ function decodeIdToken($idToken) {
 $userData = decodeIdToken($idToken);
 
 
+// prepare parameters to pass back to the main app
 $params = array(
   'email'       => $userData['email'],
   'returnPage'   => $returnPage
 );
 
 $returnUrl = $baseUrl . $returnPage;
-//die("returnUrl :" . $returnUrl);
+
 // Redirect the user to the initial app passing user data as Query String parameters so the front end could use them.
 header('Location: ' . $returnUrl . '?' . http_build_query($params));

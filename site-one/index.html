@@ -11,9 +11,22 @@
       </style>
 
     <script type = "text/javascript">
+      // make query string params publicly available. Bad practice but for the purpose of this example it will work
+      var qs = {};
+      function initOnLoad() {
+        const urlParams = new URLSearchParams(location.search);
+
+        for (const [key, value] of urlParams) {
+          qs[key] = value;
+            console.log(`${key}:${value}`);
+        }
+        if(typeof qs.email !== 'undefined') {
+          document.querySelector("#welcome").innerHTML = '<h2>Wellcome ' + qs.email + '</h2>';
+        }
+      }
     </script>
     </head>
-    <body>
+    <body onload="initOnLoad()">
     <h1>Welcome to SITE ONE</h1>
     <p>this example shows the simples way of authentication using HTTP GET method and redirect the user to authentiaction provider, and back to this WEB site.</p>
     <div id="welcome">
