@@ -1,6 +1,11 @@
 <html>
     <head>
       <style>
+
+        body {
+          font-size: 12px;
+          font-family: verdana;
+        }
         #welcome {
           border: 1px solid silver;
           text-align: center;
@@ -8,6 +13,68 @@
           padding: 10px;
         }
 
+        .navHeader {
+
+        }
+
+        #mainMenuContainer {
+          float: left;
+        }
+
+        #mainMenuContainer > #mainMenu {
+          border-bottom: 1px solid #DDDDDD;
+          list-style: none outside none;
+          margin-bottom: 20px;
+          margin-left: 0;          
+        }
+
+        #mainMenuContainer > #mainMenu::before {
+          content: "";
+          display: table;
+          line-height: 0;          
+        }
+
+        #mainMenuContainer > #mainMenu::after {
+          content: "";
+          display: table;
+          line-height: 0;
+        }
+
+
+        #mainMenuContainer > #mainMenu {
+          list-style: none outside none;
+          margin-bottom: 20px;
+          margin-left: 0;
+          border-bottom: 1px solid #DDDDDD;          
+        }
+
+        .navHeader {
+          background: #F5F5F5;
+        }
+
+        .navHeader > .bottom {
+          clear:both;
+        } 
+
+
+        #mainMenuContainer > ul > li {
+          float: left;
+          padding-left: 30px;
+          padding-right: 30px;
+          cursor: pointer;
+        }
+
+        #mainMenuContainer > ul > li:first-child {
+          background: silver;
+        }
+
+
+        .navHeader > #myAccount {
+          float: right;
+          position: relative;
+        }
+
+        
       </style>
 
     <script type = "text/javascript">
@@ -21,17 +88,27 @@
             console.log(`${key}:${value}`);
         }
         if(typeof qs.email !== 'undefined') {
-          document.querySelector("#welcome").innerHTML = '<h2>Wellcome ' + qs.email + '</h2>';
+          document.querySelector("#myAccount").innerHTML = qs.email;
         }
       }
     </script>
     </head>
-    <body onload="initOnLoad()">
-    <h1>Welcome to SITE ONE</h1>
-    <p>this example shows the simples way of authentication using HTTP GET method and redirect the user to authentiaction provider, and back to this WEB site.</p>
-    <div id="welcome">
-      <a href="https://public.toni-develops.com/examples/oauth/oauth-service/sign-in.php?site=siteone&page=index.html">Log-In</a>
-    </div>
+    <body onload="initOnLoad()">      
+      <h1>Welcome to SITE ONE</h1>
+      <header class="navHeader">
+        <div id="mainMenuContainer">
+          <ul id="mainMenu">
+            <li>HOME</li>
+            <li>PRODUCTS</li>
+            <li>ABOUT US</li>
+          </ul>
+        </div>
+        <div id="myAccount">
+          <a href="https://public.toni-develops.com/examples/oauth/oauth-service/sign-in.php?site=siteone&page=index.html">Log-In</a>
+        </div>
+        <div class="bottom"></div>
+      </header>
+      <p>this example shows the simples way of authentication using HTTP GET method and redirect the user to authentiaction provider, and back to this WEB site.</p>
     </body>
 </html>
 
