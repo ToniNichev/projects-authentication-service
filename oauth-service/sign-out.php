@@ -1,4 +1,5 @@
 <?php
+session_start();
 define('ROOTPATH', __DIR__);
 
 include  ROOTPATH ."/config/config.php";
@@ -12,6 +13,7 @@ $returnUrl = $baseUrl . $page;
 
 //die(">>>". $returnUrl);
 
+unset($_SESSION['email']);
 session_destroy();
 // Redirect the user to the initial app 
 header('Location: ' . $returnUrl);
