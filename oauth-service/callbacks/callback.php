@@ -14,4 +14,6 @@ $returnPage = $_SESSION['returnPage'];
 $authMethod = $authCoinfig->sites->$site->authenticationMethod;
 $baseUrl = $authCoinfig->sites->$site->baseUrl;
 
+print_r($provider);
+
 include "./callback-" . $provider . '.php';

@@ -45,7 +45,7 @@
         </div>        
       </header>
       <div style="clear:both"></div>
-      <p>this example shows the simplest way of authentication using HTTP GET method and redirect the user to authentiaction provider, and back to this WEB site.</p>
+      <p>This example shows the simplest way of authentication using HTTP GET method and redirect the user to authentiaction provider, and back to this WEB site.</p>
     </body>
 </html>
 
