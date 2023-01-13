@@ -14,6 +14,7 @@ $returnUrl = $baseUrl . $page;
 //die(">>>". $returnUrl);
 
 unset($_SESSION['email']);
+session_unset();
 session_destroy();
 // Redirect the user to the initial app 
 header('Location: ' . $returnUrl);
