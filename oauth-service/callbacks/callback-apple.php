@@ -20,7 +20,6 @@ $params = array(
 );
 
 $returnUrl = $baseUrl . $returnPage;
-session_destroy();
 
 // Redirect the user to the initial app passing user data as Query String parameters so the front end could use them.
 header('Location: ' . $returnUrl . '?' . http_build_query($params));

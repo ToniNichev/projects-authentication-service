@@ -1,0 +1,83 @@
+
+        body {
+          font-size: 12px;
+          font-family: verdana;
+        }
+
+        #welcome {
+          border: 1px solid silver;
+          text-align: center;
+          border-radius: 5px;
+          padding: 10px;
+        }
+
+        .navHeader {
+
+        }
+
+        #mainMenuContainer {
+          float: left;
+        }
+
+        #mainMenuContainer > ul {        
+        }
+
+        #mainMenuContainer > #ul::before {
+          content: "";
+          display: table;
+          line-height: 0;          
+        }
+
+        #mainMenuContainer > ul::after {
+        }
+
+
+        #mainMenuContainer > ul {
+          list-style: none outside none;
+          margin-bottom: 20px;
+          margin-left: 0;       
+        }
+
+        .navHeader {
+          background: #F5F5F5;
+        }
+
+        .navHeader > .bottom {
+          clear:both;
+        } 
+
+
+        #mainMenuContainer > ul > li {
+          float: left;
+          padding-left: 30px;
+          padding-right: 30px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          cursor: pointer;
+          border-bottom: 1px solid silver;
+        }
+
+        #mainMenuContainer > ul > li > a {
+          color: rgb(37, 25, 168);
+          text-decoration: none;
+          font-weight: bold;
+        }
+
+        #mainMenuContainer > ul > li > a:hover {
+          color: rgb(120, 170, 175);
+        }
+
+
+        .navHeader > #myAccount {
+          float: right;
+          position: relative;
+          padding: 25px;
+        }
+
+        .navHeader > #mainMenuContainer > ul > .active {
+          border-left: 1px solid silver;
+          border-right: 1px solid silver;
+          border-top: 1px solid silver;
+          border-bottom: none;
+        }
+        

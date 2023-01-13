@@ -1,4 +1,5 @@
 <?php
+define('ROOTPATH', __DIR__ .'/..');
 include "../config/config.php";
 $stringArray = explode('.', $_SERVER['HTTP_REFERER']);
 $provider = $stringArray[1];
