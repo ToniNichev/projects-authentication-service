@@ -80,3 +80,60 @@ body {
   border-top: 1px solid silver;
   border-bottom: none;
 }
+
+#sing-in-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 9999999;  
+}
+
+#sign-in-modal {
+  margin-top: 30px;
+  height: calc(100% - 70px);
+  max-height: 825px;
+  width: 375px;
+  background: #0C203B;
+  box-sizing: border-box;
+}
+
+#sign-in-iframe-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;  
+  box-sizing: border-box;
+}
+
+#sign-in-iframe-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 58px;
+  width: 100%;
+  background: #102039;  
+}
+
+#sign-in-close {
+  width: 54px;
+  height: 58px;
+  margin: 0;
+  padding: 8px;
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;  
+}
+
+#sign-in-clode > svg {
+  width: 20;
+  height: 20;  
+}
