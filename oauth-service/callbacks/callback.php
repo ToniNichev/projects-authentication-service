@@ -2,8 +2,8 @@
 session_start();
 define('ROOTPATH', __DIR__ .'/..');
 include "../config/config.php";
-$stringArray = explode('.', $_SERVER['HTTP_REFERER']);
-$provider = $stringArray[1];
+
+$provider = $_GET['provider'];
 
 if(!array_key_exists('site', $_SESSION)) {
   print_r($_SESSION);
@@ -15,4 +15,5 @@ $authMethod = $authCoinfig->sites->$site->authenticationMethod;
 $baseUrl = $authCoinfig->sites->$site->baseUrl;
 
 
+// die(">>". "./callback-" . $provider . '.php');
 include "./callback-" . $provider . '.php';

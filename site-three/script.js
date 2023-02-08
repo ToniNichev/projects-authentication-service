@@ -44,3 +44,11 @@ function showModalPopUp()
 
   popUpObj.focus();
 }   
+
+function showSignInPopup() {
+  document.querySelector('#sing-in-wrapper').style.display = 'flex';
+}
+
+function closeSignInPopup() {
+  document.querySelector('#sing-in-wrapper').style.display = 'none';
+}

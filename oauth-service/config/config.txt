@@ -10,6 +10,10 @@
     "sitetwo": {
       "authenticationMethod": "popupRedirect",
       "baseUrl": "https://public.toni-develops.com/examples/oauth/site-two/"
-    }    
+    },
+    "sitethree": {
+      "authenticationMethod": "popupRedirect",
+      "baseUrl": "https://public.toni-develops.com/examples/oauth/site-two/"
+    }       
   }
 }

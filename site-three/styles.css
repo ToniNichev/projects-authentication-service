@@ -85,7 +85,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
+  display: none;
   align-items: flex-start;
   justify-content: center;
   width: 100vw;
@@ -98,7 +98,7 @@ body {
   margin-top: 30px;
   height: calc(100% - 70px);
   max-height: 825px;
-  width: 375px;
+  width: 420px;
   background: #0C203B;
   box-sizing: border-box;
 }
